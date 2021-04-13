@@ -10,3 +10,8 @@
 /CS400Graph$Path.class
 /CS400Graph$Vertex.class
 /CS400Graph.class
+/DataWranglerTests.class
+/junit5.jar
+/.classpath
+/.project
+/.gitignore
