@@ -42,7 +42,7 @@ public class Frontend {
         arrivalCity = input.nextLine();
 
         if (back.getShortestPath(departingCity, arrivalCity) == null) {
-            System.out.println("\nNo such path exists between these two cities!");
+            System.out.println("\nNo such path exists between these two cities!\n");
         }
 
         else {
@@ -78,7 +78,7 @@ public class Frontend {
         } while(validDistance == false);
 
         if(back.getCitiesWithinDistance(city, distance).isEmpty()) {
-            System.out.println("\nThere are no cities within the specified distance from the desired city!");
+            System.out.println("\nThere are no cities within the specified distance from the desired city!\n");
         }
 
         else {      
@@ -87,7 +87,8 @@ public class Frontend {
         for(String location: back.getCitiesWithinDistance(city, distance)) {
             System.out.println(location);
         }
-
+	
+	System.out.println();
         }
     }
 
@@ -105,7 +106,7 @@ public class Frontend {
         }
 
         if(back.getPath(stops).isEmpty()) {
-            System.out.println("\nNo such path exists through these waypoint cities!");
+            System.out.println("\nNo such path exists through these waypoint cities!\n");
         }
 
         else {
@@ -116,6 +117,7 @@ public class Frontend {
                 + " to " + route.getEndpoints()[1] + 
                 " (" + route.getLength() + ")");  
             }
+		System.out.println();
         }
 
     }
@@ -130,7 +132,7 @@ public class Frontend {
         city = input.nextLine();
 
         if(back.getCities(city).isEmpty()) {
-            System.out.println("\nThere are no direct connections from the desired city!");
+            System.out.println("\nThere are no direct connections from the desired city!\n");
         }
 
         else {
@@ -139,6 +141,7 @@ public class Frontend {
             for(String location: back.getCities(city)) {
                 System.out.println(location);
             }
+		System.out.println();
         }
     }
 
@@ -152,12 +155,13 @@ public class Frontend {
         city = input.nextLine();
 
         if(back.getFurthestCity(city) == null) {
-            System.out.println("\nNo such city exists that is reachable from the desired city!");
+            System.out.println("\nNo such city exists that is reachable from the desired city!\n");
         }
 
         else {
             System.out.println(); //console output spacing
             System.out.println(back.getFurthestCity(city));
+		System.out.println();
         }
     }
 
