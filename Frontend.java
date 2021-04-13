@@ -47,7 +47,7 @@ public class Frontend {
 
         else {
             System.out.println(); //console output spacing
-            System.out.println(back.getShortestPath(departingCity, arrivalCity));
+            System.out.println(back.getShortestPath(departingCity, arrivalCity) + "\n");
         }
     }
 
