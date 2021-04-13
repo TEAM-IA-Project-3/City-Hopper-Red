@@ -1,3 +1,12 @@
+// --== CS400 File Header Information ==--
+// Name: Nadim Isaac
+// Email: nisaac2@wisc.edu
+// Team: IA Red
+// Role: Frontend Developer
+// TA: Sid Mohan
+// Lecturer: Florian Heimerl
+// Notes to Grader: N/A
+
 import java.io.File;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -247,24 +256,8 @@ public class Frontend {
 		return result;
 	}
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Frontend front = new Frontend();
+	    front.run();
     }
-
-
-
-
-
-
-
 }
