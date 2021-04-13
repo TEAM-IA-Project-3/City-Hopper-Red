@@ -192,7 +192,7 @@ public class Frontend {
                     furthestCityCommand();
                     break;
 				case 'o':
-					System.out.println("Thanks for using City Hopper!");
+					System.out.println("\nThanks for using City Hopper!");
 					break loop;
 				default:
 					System.out.println("That was not the right command. Here are the allowed commands for this car catolog.");
