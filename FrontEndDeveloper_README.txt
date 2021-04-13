@@ -8,8 +8,10 @@ Team: Red
 
 Files Written by Me:
 --------------------
-Frontend.java
-FrontendTests.java
+Frontend.java - Serves as the user interface of the project, takes in user commands in console and utilizes backend methods to perform desired operations, and
+display results in a clean manner for user on console
+
+FrontendTests.java - Tests the implementation of the Frontend
 
 Additional Contributions:
 -------------------------
