@@ -18,6 +18,12 @@ public class RouteReader implements RouteReaderInterface {
 	private ArrayList<String> cities;
 	private ArrayList<RouteInterface> routes;
 	
+	/**
+	 * Takes in a reader object and creates list of cities and routes
+	 * @param inputFileReader reader object
+	 * @throws IOException
+	 * @throws DataFormatException
+	 */
 	public RouteReader(Reader inputFileReader) throws IOException, DataFormatException {
 		this.cities = new ArrayList<String>();
 		this.routes = new ArrayList<RouteInterface>();
@@ -61,11 +67,17 @@ public class RouteReader implements RouteReaderInterface {
 		}
 	}
 	
+	/**
+	 * List of Strings that represent city names
+	 */
 	@Override
 	public List<String> getCities() {
 		return cities;
 	}
 
+	/**
+	 * List of RouteInterfaces that represent path between cities
+	 */
 	@Override
 	public List<RouteInterface> getRoutes() {
 		return routes;

@@ -45,7 +45,9 @@ public class CS400Graph<T> implements AdvancedGraphADT<T> {
     protected Hashtable<T, Vertex> vertices; // holds graph verticies, key=data
     public CS400Graph() { vertices = new Hashtable<>(); }
 
-	@Override
+    /**
+     * Returns all vertices connected to a given vertex
+     */
 	public List<T> getConnectedVertices(T vertex) {
 		ArrayList<T> connected = new ArrayList<T>();
 		for(Edge e: this.vertices.get(vertex).edgesLeaving) {
