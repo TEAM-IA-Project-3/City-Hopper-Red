@@ -164,7 +164,7 @@ public class Frontend {
     public void run() {
 		char instructionKey;
 		Scanner input = this.scanner;
-		System.out.println("Here are some City Hopper Commands:");
+		System.out.println("\nHere are some City Hopper Commands:\n");
 
 		loop: while (true) {
 
