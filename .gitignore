@@ -1,0 +1,17 @@
+/AdvancedGraphADT.class
+/BackendInterface.class
+/GraphADT.class
+/RouteInterface.class
+/RouteReaderInterface.class
+/RouteReader.class
+/Route.class
+/Graph.class
+/CS400Graph$Edge.class
+/CS400Graph$Path.class
+/CS400Graph$Vertex.class
+/CS400Graph.class
+/DataWranglerTests.class
+/junit5.jar
+/.classpath
+/.project
+/.gitignore

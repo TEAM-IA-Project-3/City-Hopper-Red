@@ -1,4 +1,4 @@
 public interface RouteInterface {
-  String[] getEndpoints();
-  int getLength();
+	String[] getEndpoints();
+	int getLength();
 }
