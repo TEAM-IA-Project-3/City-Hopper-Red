@@ -16,7 +16,7 @@ DataWranglerTests.java - tests the functionality of the classes and methods writ
 
 Additional Contributions:
 -------------------------
-n/a
+Helped backend developer write Backend.java
 
 Signature:
 ----------
