@@ -25,10 +25,27 @@ public class Frontend {
 
         setCSV();
 
-        back = new Backend(csv);
+        back = new BackendDummy();
 
     }
 
+    //this constructor is used in junit5 tests to simplify simulating user input for csv file
+    public Frontend(String csv) {
+        System.out.println("Starting Team IA City Hopper");
+
+        if(!validFileCSV(csv)) {
+            setCSV();
+        }
+
+        this.scanner = new Scanner(System.in);
+
+        back = new BackendDummy();
+    }
+
+    /**
+     * Takes user input for two cities to find the shortest path between and
+     * prints to the console this path.
+     */
     private void shortestPathCommand() {
         Scanner input = this.scanner;
 
@@ -51,6 +68,10 @@ public class Frontend {
         }
     }
 
+    /**
+     * Takes user input for a String city and int distance to find other cities within that
+     * distance from the user-specified city, and prints those cities line-by-line to the console.
+     */
     private void getCitiesDistanceCommand() {
         Scanner input = this.scanner;
 
@@ -92,6 +113,11 @@ public class Frontend {
         }
     }
 
+    /**
+     * Constructs an array list of String cities provided by the user and uses it to come up
+     * with the shortest path through those cities, and prints this path route by route (w/ path cost)
+     * to the console.
+     */
     private void getPathCommand() {
         Scanner input = this.scanner;
         List<String> stops = new ArrayList<>();
@@ -122,6 +148,9 @@ public class Frontend {
 
     }
 
+    /**
+     * Prints to the console all directly connected cities line-by-line to a city provided by the user.
+     */
     private void directConnectionsCommand() {
         Scanner input = this.scanner;
 
@@ -145,6 +174,9 @@ public class Frontend {
         }
     }
 
+    /**
+     * Prints to the console the furthest city from the user-specified city.
+     */
     private void furthestCityCommand() {
         Scanner input = this.scanner;
 
@@ -165,6 +197,10 @@ public class Frontend {
         }
     }
 
+    /**
+     * Runs the program and prints possible commands each time an operation is completed, until
+     * the program is exited using the "o" character.
+     */
     public void run() {
 		char instructionKey;
 		Scanner input = this.scanner;
@@ -195,7 +231,7 @@ public class Frontend {
 					System.out.println("\nThanks for using City Hopper!");
 					break loop;
 				default:
-					System.out.println("That was not the right command. Here are the allowed commands for this car catolog.");
+					System.out.println("\nThat was not the right command. Here are the allowed commands for this car catolog.");
 			}
         }
     }
@@ -261,6 +297,11 @@ public class Frontend {
 		return result;
 	}
 
+    /**
+     * Point of entry for our program, where we instantiate frontend and call run()
+     * function to start taking commands from the user.
+     * @param args
+     */
     public static void main(String[] args) {
         Frontend front = new Frontend();
 	    front.run();
